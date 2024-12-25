@@ -9,19 +9,21 @@ if [ -z "$UPDATE_INTERVAL" ]; then
   # Run once if UPDATE_INTERVAL is not defined
   ${PIXLET} render /app.star && \
     ${PIXLET} push --background \
-                   --api-token ${PIXLET_API_TOKEN} \
                    --installation-id ${PIXLET_INSTALLATION_ID} \
-                   ${PIXLET_DEVICE_ID} \
-                   /app.webp
+                    ${PIXLET_DEVICE_ID} \
+                   /app.webp \
+                   -t ${PIXLET_API_TOKEN} \
+
+
 else
   # Run every UPDATE_INTERVAL seconds if defined
   while true; do
     ${PIXLET} render /app.star && \
-      ${PIXLET} push --background \
-                     --api-token ${PIXLET_API_TOKEN} \
-                     --installation-id ${PIXLET_INSTALLATION_ID} \
-                     ${PIXLET_DEVICE_ID} \
-                     /app.webp
+    ${PIXLET} push --background \
+                   --installation-id ${PIXLET_INSTALLATION_ID} \
+                    ${PIXLET_DEVICE_ID} \
+                   /app.webp \
+                   -t ${PIXLET_API_TOKEN} \
     sleep $UPDATE_INTERVAL
   done
 fi

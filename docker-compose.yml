@@ -1,6 +1,7 @@
 services:
   pixlet-push:
     image: mdouglas/pixlet-push:latest
+    container_name: pixlet-push-update
     environment:
       - PIXLET_API_TOKEN=<YOUR API TOKEN>
       - PIXLET_INSTALLATION_ID=<YOUR APP NAME>

@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  pixlet-push:
+    image: mdouglas/pixlet-push:latest
+    environment:
+      - PIXLET_API_TOKEN=<YOUR API TOKEN>
+      - PIXLET_INSTALLATION_ID=<YOUR APP NAME>
+      - PIXLET_DEVICE_ID=<YOUR DEVICE ID>
+      - UPDATE_INTERVAL=120  # Set the interval to 120 seconds (2 minutes). Remove or comment out this line to run once.
+    volumes:
+      - ./example.star:/app.star
+    restart: unless-stopped

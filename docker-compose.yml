@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   pixlet-push:
     image: mdouglas/pixlet-push:latest

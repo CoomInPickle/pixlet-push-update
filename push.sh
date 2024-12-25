@@ -12,7 +12,7 @@ if [ -z "$UPDATE_INTERVAL" ]; then
                    --api-token ${PIXLET_API_TOKEN} \
                    --installation-id ${PIXLET_INSTALLATION_ID} \
                    ${PIXLET_DEVICE_ID} \
-                   /app.star.webp
+                   /app.webp
 else
   # Run every UPDATE_INTERVAL seconds if defined
   while true; do
@@ -21,7 +21,7 @@ else
                      --api-token ${PIXLET_API_TOKEN} \
                      --installation-id ${PIXLET_INSTALLATION_ID} \
                      ${PIXLET_DEVICE_ID} \
-                     /app.star.webp
+                     /app.webp
     sleep $UPDATE_INTERVAL
   done
 fi

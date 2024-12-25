@@ -22,7 +22,10 @@ services:
 
 ## Environment Variables
 
-* `PIXLET_API_TOKEN`: The API token retrieved from the mobile app
-* `PIXLET_DEVICE_ID`: The Device ID retrieved from the mobile app (on the same screen as the API token)
-* `PIXLET_INSTALLATION_ID`: The unique name of your app that will appear in the app when it's pushed
-* `UPDATE_INTERVAL`: Time between updates, if empty only push once
+**Note:** Quotation marks (`"`) are **not required** for these environment variables. If quotation marks are added, the variables **will not work correctly**.
+
+- `PIXLET_API_TOKEN`: The API token retrieved from the mobile app  
+- `PIXLET_DEVICE_ID`: The Device ID retrieved from the mobile app (on the same screen as the API token)  
+- `PIXLET_INSTALLATION_ID`: The unique name of your app that will appear in the app when it's pushed  
+- `UPDATE_INTERVAL`: Time between updates, if empty only push once
+
